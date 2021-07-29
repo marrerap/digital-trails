@@ -8,9 +8,11 @@ var usersRouter = require('./routes/users');
 var hikersRouter = require('./routes/hikers');
 const apiTrailRouter = require('./routes/trails');
 
-
-
 var app = express();
+//EJS engines
+app.set('view engine', 'ejs')
+app.set('views', 'views')
+
 
 app.use(logger('dev'));
 app.use(express.json());

@@ -8,9 +8,13 @@ const db = require('../models');
 router.get('/', (req, res, next) => {
     db.Hiker.findAll()
       .then((hikers) => {
-          res.json(hikers)
-      })
-  });
+        res.render('hikers', {
+            title : 'Hikers',
+            hikers : hikers
+        })
+        
+    });
+  })
   
 
 // patients post statement
