@@ -3,13 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "reset": "sequelize-cli db:drop; sequelize-cli db:create && sequelize-cli db:migrate"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "morgan": "~1.9.1",
+    "nodemon": "^2.0.12",
     "pg": "^8.7.1",
     "sequelize": "^6.6.5",
     "sequelize-cli": "^6.2.0"

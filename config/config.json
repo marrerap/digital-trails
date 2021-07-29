@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "",
-    "database": "Hiker_Hikes",
+    "database": "Digital-Trails",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
