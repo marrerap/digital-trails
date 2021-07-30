@@ -14,6 +14,9 @@ module.exports = {
       birthday: {
         type: Sequelize.DATEONLY
       },
+      bio: {
+        type:Sequelize.STRING
+      },
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE

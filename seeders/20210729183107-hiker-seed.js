@@ -5,43 +5,53 @@ module.exports = {
     return queryInterface.bulkInsert('Hikers', [
       {
         firstName: "Roger Rabbit",
-        birthday: "1981-02-01"
+        birthday: "1981-02-01",
+        bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt "
       },
       {
         firstName: "Hannibal Lecter",
-        birthday: "1933-01-20"
+        birthday: "1933-01-20",
+        bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt "
       },
       {
         firstName: "Robert Hansen",
-        birthday: "1939-02-15"
+        birthday: "1939-02-15",
+        bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt "
       },
       {
         firstName: "Ricardo Ramirez",
-        birthday: "1960-02-29"
+        birthday: "1960-02-29",
+        bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt "
       },
       {
         firstName: "Ted Bundy",
-        birthday: "1926-11-24"
+        birthday: "1926-11-24",
+        bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt "
       },
       {
         firstName: "Christen Gilbert",
-        birthday: "1967-11-13"
+        birthday: "1967-11-13",
+        bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt "
       },
       {
         firstName: "Lavinia Fisher",
-        birthday: "1793-11-02"
+        birthday: "1793-11-02",
+        bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt "
       },
       {
         firstName: "Waneta Hoyt",
-        birthday: "1946-05-13"
+        birthday: "1946-05-13",
+        bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt "
       },
       {
         firstName: "Myra Hindley",
-        birthday: "1942-07-03"
+        birthday: "1942-07-03",
+        bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt "
       },
       {
         firstName: "Rosemary West",
-        birthday: "1953-11-29"
+        birthday: "1953-11-29",
+        bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt "
       },
     ])
   },
