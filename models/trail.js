@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Trail.init({
-    trailName: DataTypes.STRING
+    trailName: DataTypes.STRING,
+    description: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Trail',

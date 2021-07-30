@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <%-include('partials/head') %>
+<%-include('partials/head') %>
+
   <body>
-      <%-include('partials/nav') %>
-    <h1><%= title %></h1>
-    <% hikers.forEach((hiker)=> {  %>
-        <h2><%=hiker.firstName %></h2>
+    <%-include('partials/nav') %>
+      <h1>
+        <%= title %>
+      </h1>
+      <% hikers.forEach((hiker)=> { %>
+        <h2>
+          <%=hiker.firstName %>
+        </h2>
         <a href="/hikers/<%=hiker.id %>">Go to Profile</a>
-   <% })%>
+        <% })%>
   </body>
+
 </html>
