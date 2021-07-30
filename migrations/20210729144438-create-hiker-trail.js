@@ -13,14 +13,14 @@ module.exports = {
         defaultValue: false,
         allowNull: false
       },
-      HikerId: {
+      HikerId: { //fks
         type: Sequelize.INTEGER,
         references: {
           model: "Hikers",
           key: 'id'
         }
       },
-      TrailId: {
+      TrailId: { //fks
         type: Sequelize.INTEGER,
         references: {
           model: "Trails",

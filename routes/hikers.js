@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const db = require('../models');
+const hiker_trail = require('../models/hiker_trail');
 
 
 
@@ -17,7 +18,7 @@ router.get('/', (req, res, next) => {
   })
   
 
-// patients post statement
+// hikers post statement
 router.post('/', (req, res) => {
   if (!req.body || !req.body.name) {
     // respond with an error
@@ -28,8 +29,8 @@ router.post('/', (req, res) => {
   }
   // insert new todo into DB with text, and return newly created row
   db.Hiker.create({
-    name: req.body.name,
-    birthday: req.body.birthday,
+    firstName: req.body.firstName,
+    birthdate: req.body.birthdate,
     })
     .then((hiker) => {
       res.status(201).json(hiker)
@@ -38,23 +39,24 @@ router.post('/', (req, res) => {
 
 // set time to hike the trail and add it to the hiker_trail table
 router.post('/:id/hiker_trail', (req, res) => {
-  if (!req.body || !req.body.time) {
+  if (!req.body) {
     res.status(422).json({
-      error: "Please include time."
+      error: "Error."
     })
     return
   }
 
   db.Hiker.findByPk(req.params.id)
   .then((hiker) => {
-    if (!patient) {
+    if (!hiker) {
       res.status(404).json({
         error: "No hiker Found"        
       })
       return
     }
     hiker.createHiker_Trail({
-      time: req.body.time
+      completed: req.body.completed,
+      TrailId : req.body.id,
     })
     .then((hiker_trail) => {
       res.status(201).json(hiker_trail)

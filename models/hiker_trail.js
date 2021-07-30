@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Hiker_Trail.belongsTo(models.Hiker)
-      Hiker_Trail.belongsTo(models.Trail)
+      Hiker_Trail.belongsTo(models.Hiker) //fk
+      Hiker_Trail.belongsTo(models.Trail) //fk
     }
   };
   Hiker_Trail.init({
