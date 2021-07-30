@@ -37,6 +37,20 @@ router.post('/', (req, res) => {
     })
 })
 
+router.get('/:id', (req, res, next) => {
+  db.Hiker.findOne({ where: { id: req.params.id } })
+    .then((hiker) => {
+      console.log(hiker)
+      res.render('hikerpage', {
+            title: "Your Page",
+            hiker : hiker.firstName,
+            bio : hiker.bio
+        })
+      
+  });
+})
+
+
 // set time to hike the trail and add it to the hiker_trail table
 router.post('/:id/hiker_trail', (req, res) => {
   if (!req.body) {
@@ -59,7 +73,7 @@ router.post('/:id/hiker_trail', (req, res) => {
       TrailId : req.body.id,
     })
     .then((hiker_trail) => {
-      res.status(201).json(hiker_trail)
+      res.redirect('/hikers')
     })
   })
 })

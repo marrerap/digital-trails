@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%-include('partials/head') %>
+  <body>
+      <%-include('partials/nav') %>
+    <h1><%= title %></h1>
+    <% trails.forEach((trails)=> {  %>
+        <h2><%=trails.trailName %></h2>
+   <% })%>
+  </body>
+</html>
