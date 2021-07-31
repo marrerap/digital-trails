@@ -5,10 +5,80 @@
 
     <body class="body">
         <%-include('partials/nav') %>
-            <form>
+
+<div class="row">
+    <form class="col-5 register-form">
+                <div class="register-head">
+                    <h1>Register</h1>
+                </div>
+
                 <div class="row g-3 align-items-center">
                     <div class="col-auto">
-                        <label for="inputPassword6" class="col-form-label">Password</label>
+                        <label for="inputPassword6" style="width: 7rem;" class="col-form-label">Username:</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="username" id="inputname" class="form-control"
+                            aria-describedby="usernameHelpInline">
+                    </div>
+                    <div class="col-auto">
+
+                    </div>
+                </div>
+                <br>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputPassword6" style="width: 7rem;" class="col-form-label">Password:</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="password" id="inputPassword6" class="form-control"
+                            aria-describedby="passwordHelpInline">
+                    </div>
+                    
+                    <div class="col-auto">
+                        <span id="passwordHelpInline" class="form-text">
+                            Must be 8-20 characters long.
+                        </span>
+                    </div>
+                </div>
+            </form>
+
+            <div class="verticle-line" style="width:10px; padding: 0;"></div>
+            <form class=" col-5 login-form">
+                <div class="login-head">
+                    <h1>Login</h1>
+                </div>
+
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputEmail" style="width: 7rem;" class="col-form-label">Email:</label>
+                    </div>
+                    
+                    <div class="col-auto">
+                        <input type="email" id="email" class="form-control" aria-describedby="emailHelpInline">
+                    </div>
+                    <div class="col-auto">
+
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputUsername" style="width: 7rem;" class="col-form-label">Username:</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type="username" id="inputname" class="form-control"
+                            aria-describedby="usernameHelpInline">
+                    </div>
+                    <div class="col-auto">
+
+                    </div>
+                </div>
+                <br>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="inputPassword6" style="width: 7rem;" class="col-form-label">Password:</label>
                     </div>
                     <div class="col-auto">
                         <input type="password" id="inputPassword6" class="form-control"
@@ -20,8 +90,10 @@
                         </span>
                     </div>
                 </div>
-            </form>
-
+            
+                </form>
+</div>
+            
 
 
     </body>

@@ -67,7 +67,24 @@ title {
 .cardLink:hover {
   color: #6e996a;
 }
+
 .cardDiv {
   display: flex;
   justify-content: start;
 }
+
+
+.verticle-line {
+  background-color: rgb(0, 0, 0);
+  height: 30rem;
+  
+  /* position:absolute;
+  left: 50%;
+  top:110px;
+  margin-left: -30px; */
+}
+
+/* .login-form {
+  margin-left: 50px;
+} */
+
