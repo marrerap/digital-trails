@@ -3,23 +3,45 @@
 
 <%-include('partials/head') %>
 
-  <body>
+  <body class="body">
     <%-include('partials/nav') %>
-      <h1>
-        <%= title %>
-      </h1>
-      <% trails.forEach((trail)=> { %>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title"> <%=trail.trailName %> </h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text"><%=trail.description %> </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-          <% })%>
+      <div class="row">
+        <div class="col-12">
+          <h1 class="title">
+            <%= title %>
+          </h1>
         </div>
-      
+      </div>
+<div class="row">
+      <% trails.forEach((trail)=> { %>
+        
+          <div class="col-sm-4 "style="margin-top: 1rem;">
+
+            <div class="cards justify-content-center" style="width: 18rem;">
+
+
+              <div class="card-body" >
+
+                <h5 class="card-title">
+                  <%=trail.trailName %>
+                </h5>
+                <h6 class=" mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">
+                  <%=trail.description %>
+                </p>
+                <a href="#" class="cardLink">Card link</a>
+                
+              </div>
+              
+            </div>
+          </div><% })%>
+        </div>
+
+
+
+
+
+
   </body>
 
 </html>
