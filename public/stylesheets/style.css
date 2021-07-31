@@ -1,5 +1,5 @@
 body {
-  
+  padding: 0px 5px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   
 }
@@ -88,3 +88,9 @@ title {
   margin-left: 50px;
 } */
 
+
+form {
+  background-color: #b4dbc0;
+  color: #466b41;
+  
+}
