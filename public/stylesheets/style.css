@@ -1,8 +1,73 @@
 body {
-  padding: 50px;
+  
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
+}
+.titleDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-a {
-  color: #00B7FF;
+.trailIcon {
+  height: 5;
+  display: flex;
+ }
+
+title {
+  display: flex;
+  justify-content: center;
+  font-size: 3.5rem ;
+  }
+
+.title {
+  justify-content: center;
+}
+.body {
+  background-color: #b56357;
+  color: #eae3ea;
+}
+
+.navbar {
+  background-color: #eae3ea;
+  
+}
+.navLink {
+  color: #b56357;
+  display: block;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+.navbarBrand {
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #b56357;
+}
+.cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #b4dbc0;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  color: #6b9764;
+}
+.cardLink {
+  color: #466b41;
+  text-decoration: underline;
+}
+.cardLink:hover {
+  color: #6e996a;
+}
+.cardDiv {
+  display: flex;
+  justify-content: start;
 }
