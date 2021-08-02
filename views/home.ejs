@@ -6,121 +6,107 @@
     <body class="body">
         <%-include('partials/nav') %>
 
-<div class="row justify-content-evenly">
-    <form class="col-5 register-form" style="margin-top: 2rem;">
-                <div class="register-head">
-                    <h1>Register</h1>
-                </div>
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="inputFname" style="width: 7rem;" class="col-form-label">Firstname:</label>
+            <div class="row justify-content-evenly">
+                <form method="post" action="/register" class="col-5 register-form" style="margin-top: 2rem;">
+                    <div class="register-head">
+                        <h1>Register</h1>
                     </div>
-                    <div class="col-auto">
-                        <input type="fname" id="fname" class="form-control"
-                            aria-describedby="fnameHelpInline">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="inputFname" style="width: 7rem;" class="col-form-label">Firstname:</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="fname" id="fname" class="form-control" aria-describedby="fnameHelpInline">
+                        </div>
                     </div>
-                </div>
-                <br>
-                        <div class="row g-3 align-items-center">
-                            <div class="col-auto">
-                                <label for="bio" style="width: 7rem;" class="col-form-label">Bio:</label>
-                            </div>
-                            <div class="col-auto">
-                                <input type="bio" id="bio" class="form-control"
-                                    aria-describedby="usernameHelpInline">
-                            </div>
-                                </div>
-                                <br>
-                                <div class="row g-3 align-items-center">
-                                    <div class="col-auto">
-                                        <label for="birthday" style="width: 7rem;" class="col-form-label">BirthDate:</label>
-                                    </div>
-                                    <div class="col-auto">
-                                        <input type="birthday" id="birthday" class="form-control"
-                                            aria-describedby="usernameHelpInline">
-                                    </div>
-                                        </div>
-                                        <br>
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="inputPassword6" style="width: 7rem;" class="col-form-label">Username:</label>
+                    <br>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="bio" style="width: 7rem;" class="col-form-label">Bio:</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="bio" id="bio" class="form-control" aria-describedby="usernameHelpInline">
+                        </div>
                     </div>
-                    <div class="col-auto">
-                        <input type="username" id="inputname" class="form-control"
-                            aria-describedby="usernameHelpInline">
+                    <br>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="birthday" style="width: 7rem;" class="col-form-label">BirthDate:</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="birthday" id="birthday" class="form-control"
+                                aria-describedby="usernameHelpInline">
+                        </div>
                     </div>
-                    
-                </div>
-                <br>
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="inputPassword6" style="width: 7rem;" class="col-form-label">Password:</label>
-                    </div>
-                    <div class="col-auto">
-                        <input type="password" id="inputPassword6" class="form-control"
-                            aria-describedby="passwordHelpInline">
-                    </div>
-                    
-                    <div class="col-auto">
-                        <span id="passwordHelpInline" style="color: #466b41;" class="form-text">
-                            Must be 8-20 characters long.
-                        </span>
-                    </div>
-                </div>
-            </form>
-
-            <div class="verticle-line" style="width:10px; padding: 0;"></div>
-            <form class=" col-5 login-form" style="margin-top: 2rem;">
-                <div class="login-head">
-                    <h1>Login</h1>
-                </div>
-
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="inputEmail" style="width: 7rem;" class="col-form-label">Email:</label>
-                    </div>
-                    
-                    <div class="col-auto">
-                        <input type="email" id="email" class="form-control" aria-describedby="emailHelpInline">
-                    </div>
-                    <div class="col-auto">
+                    <br>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="inputEmail" style="width: 7rem;" class="col-form-label">Email</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="email" id="inputEmail" class="form-control" aria-describedby="emailHelpInline">
+                        </div>
 
                     </div>
-                </div>
+                    <br>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="inputPassword6" style="width: 7rem;" class="col-form-label">Password:</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="password" id="inputPassword6" class="form-control"
+                                aria-describedby="passwordHelpInline">
+                        </div>
 
-                <br>
-
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="inputUsername" style="width: 7rem;" class="col-form-label">Username:</label>
+                        <div class="col-auto">
+                            <span id="passwordHelpInline" style="color: #466b41;" class="form-text">
+                                Must be 8-20 characters long.
+                            </span>
+                        </div>
                     </div>
-                    <div class="col-auto">
-                        <input type="username" id="inputname" class="form-control"
-                            aria-describedby="usernameHelpInline">
-                    </div>
-                    <div class="col-auto">
-
-                    </div>
-                </div>
-                <br>
-                <div class="row g-3 align-items-center">
-                    <div class="col-auto">
-                        <label for="inputPassword6" style="width: 7rem;" class="col-form-label">Password:</label>
-                    </div>
-                    <div class="col-auto">
-                        <input type="password" id="inputPassword6" class="form-control"
-                            aria-describedby="passwordHelpInline">
-                    </div>
-                    <div class="col-auto">
-                        <span id="passwordHelpInline" style="color: #466b41;" class="form-text">
-                            Must be 8-20 characters long.
-                        </span>
-                    </div>
-                </div>
-            
+                    <div><button type="submit">Register</button></div>
                 </form>
-</div>
-            
+
+                <div class="verticle-line" style="width:10px; padding: 0;"></div>
+                <form method="post" action="/login" class=" col-5 login-form" style="margin-top: 2rem;">
+                    <div class="login-head">
+                        <h1>Login</h1>
+                    </div>
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="inputEmail" style="width: 7rem;" class="col-form-label" >Email:</label>
+                        </div>
+
+                        <div class="col-auto">
+                            <input type="email" id="email" class="form-control" name="email" aria-describedby="emailHelpInline">
+                        </div>
+                        <div class="col-auto">
+
+                        </div>
+                    </div>
+
+
+                    <br>
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto">
+                            <label for="inputPassword6" style="width: 7rem;" class="col-form-label">Password:</label>
+                        </div>
+                        <div class="col-auto">
+                            <input type="password" id="inputPassword6" name="password" class="form-control"
+                                aria-describedby="passwordHelpInline">
+                        </div>
+                        <div class="col-auto">
+                            <span id="passwordHelpInline" style="color: #466b41;" class="form-text">
+                                Must be 8-20 characters long.
+                            </span>
+                        </div>
+                    </div>
+                    <div><button type="submit">Login</button></div>
+
+                </form>
+            </div>
+
 
 
     </body>
