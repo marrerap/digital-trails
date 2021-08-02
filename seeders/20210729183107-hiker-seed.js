@@ -7,7 +7,7 @@ module.exports = {
         firstName: "Roger Rabbit",
         birthday: "1981-02-01",
         bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt ",
-        email: "mclovin@superbad.com",
+        email: "mckenna@onlydrinkscoldbrew.com",
         username: "useMyName"
 
       },
@@ -64,7 +64,7 @@ module.exports = {
         firstName: "Myra Hindley",
         birthday: "1942-07-03",
         bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt ",
-        email: "reed@notamusician.com",
+        email: "reed@notadj.com",
         username: "useMyName"
       },
       {
