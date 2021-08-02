@@ -16,27 +16,26 @@ router.get('/', (req, res, next) => {
 
 router.post('/register', function(req, res, next) {
     //check for email and password
-    if(!req.body || !req.body.email || !req.body.password || !req.body.username) {
+    if(!req.body || !req.body.regEmail || !req.body.regPassword || !req.body.regName) {
       //respond with error if not included
-      res.status(422).json({error: 'must include email,password and username'})
+      res.status(422).json({error: 'must include email, password'})
       return
     }
     //hash password
-      bcrypt.hash(req.body.password, 10)
+      bcrypt.hash(req.body.regPassword, 10)
         .then((hash) => {
           //store user details
           //db.User.create
-          db.User.create({
-            email: req.body.email,
+          db.Hiker.create({
+            email: req.body.regEmail,
             password: hash,
             bio : req.body.bio,
-            firstName : req.body.firstName,
-            username : req.body.username,
-            birthday: req.body.birthday
+            firstName : req.body.regName,
+            birthday: req.body.regBirthday
           })
-            .then((user) => {
+            .then((hiker) => {
                 //respond with success
-                res.status(201).json(user)
+                res.redirect('/trails')
   
             })
   
