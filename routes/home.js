@@ -75,7 +75,7 @@ router.post('/register', function(req, res, next) {
     //tell express that the user logged out
     req.session.hiker = null;
     //send response: success
-    res.json({message: 'successfully logged out'})
+    res.redirect("/")
   })
   
   module.exports = router;

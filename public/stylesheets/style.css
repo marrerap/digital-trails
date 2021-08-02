@@ -94,3 +94,11 @@ form {
   color: #466b41;
   
 }
+.logout {
+  color: #eae3ea;
+  text-decoration: none;
+  }
+
+.logout:hover {
+  color: #eae3ea;
+}
