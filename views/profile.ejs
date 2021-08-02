@@ -4,12 +4,39 @@
     <%-include('partials/head') %>
     
       <body class="body">
-        <%-include('partials/nav') %>
+        <nav class="navbar navbar-expand-sm  ">
+            <div class="container-fluid">
+              <a class="navbarBrand" href="#"><%= title %></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="navLink" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navLink" href="/hikers">Hikers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navLink" href="/trails">Trails</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navLink" href="/profile">My Page</a>
+                  </li>
+                </ul>
+              </div>
+              <li class="nav-item d-flex align-items-center border bg-primary text-white">
+                <a class="navLink" href="/edit">Edit Profile</a>
+              </li>
+            </div>
+          </nav>
+    
         <div class="container mb-5">
             <div clas="row">
                 <div class="col mt-3 d-flex flex-column align-items-center">
                     <div class="card-body text-center border">
-                        <img src="/image/golblum.png" width="180" height="160" class="rounded-circle border "/>
+                        <img src="/image/golblum.png" width="180" height="160" class="rounded-circle border"/>
                         <h4><%= hiker%></h4>
                         <p>
                             <%= bio%>
@@ -52,7 +79,8 @@
                         <h3 class="display-4">Planned Hikes</h3>
                         <p class="lead"> Nothing to see here</p>
 
-                        <hr class="my-4"/>            
+                        <hr class="my-4"/>     
+                        <a class="btn btn-primary mb-2" href="/trails" role="button">Add a Hike</a>            
                     </div>
                     <div class="jumbotron text-center mb-5" style="background-color: azure;">
                         <h3 class="display-4">Completed Hikes</h3>

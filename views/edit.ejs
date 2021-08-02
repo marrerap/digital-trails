@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+    <html lang="en">
+    
+    <%-include('partials/head') %>
+    
+      <body class="body">
+        <%-include('partials/nav') %>
+        <form id="bioForm" method="patch" action="/edit">
+            <label for="editBio">Edit About Me</label>
+            <input type="text" name="editBio" id="editBio" required>
+            <button type="submit">Submit</button>
+        </form>
+
+      </body>
