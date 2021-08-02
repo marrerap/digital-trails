@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/home', homeRouter);
+app.use('/', homeRouter);
 app.use('/users', usersRouter);
 app.use('/hikers', hikersRouter);
 app.use('/trails', apiTrailRouter)
