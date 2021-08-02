@@ -31,7 +31,9 @@
                 <p class="card-text">
                   <%=trail.description %>
                 </p>
-                <a href="#" class="cardLink"><img src="https://img.icons8.com/color/50/000000/add-tag.png"/> Add to Planned Hikes</a>
+                <form method="post" action="/trails/:id">
+                  <button class="cardLink"><img src="https://img.icons8.com/color/50/000000/add-tag.png"/> Add to Planned Hikes</button>
+                </form>
                 
               </div>
 

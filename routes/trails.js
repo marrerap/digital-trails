@@ -14,12 +14,18 @@ router.get('/', (req, res, next) => {
   });
 })
 
-// router.get('/', function(req, res, next) {
-//   db.Trail.findAll()
-//   .then((trails) => {
-//     res.json(trails)
-//   })
-// });
+router.post('/:id', function(req, res, next) {
+    db.Hiker_Trail.upsert({
+      HikerId: req.session.hiker.id,
+      TrailId: req.params.id
+    })
+      .then((hiker_trail) => {
+          //respond with success
+          res.redirect('/trails')
+
+      })
+
+  });
 
 
 module.exports = router;
