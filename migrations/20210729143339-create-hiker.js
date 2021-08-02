@@ -17,6 +17,12 @@ module.exports = {
       bio: {
         type:Sequelize.STRING
       },
+      email: {
+        type:Sequelize.STRING
+      },
+      username: {
+        type:Sequelize.STRING
+      },      
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE
