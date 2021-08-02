@@ -5,8 +5,11 @@ var logger = require('morgan');
 const session = require('express-session');
 var homeRouter = require('./routes/home');
 
+
 var hikersRouter = require('./routes/hikers');
 const apiTrailRouter = require('./routes/trails');
+const apiProfileRouter = require('./routes/profile')
+const apiEditRouter = require('./routes/edit')
 const checkAuth = require('./checkAuth');
 
 var app = express();
@@ -35,6 +38,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', homeRouter);
 app.use('/hikers', checkAuth, hikersRouter);
 app.use('/trails', apiTrailRouter)
+app.use('/profile', checkAuth, apiProfileRouter)
+app.use('/edit', checkAuth, apiEditRouter)
 
 
 

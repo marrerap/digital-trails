@@ -40,9 +40,8 @@ router.post('/', (req, res) => {
 router.get('/:id', (req, res, next) => {
   db.Hiker.findOne({ where: { id: req.params.id } })
     .then((hiker) => {
-      console.log(hiker)
       res.render('hikerpage', {
-            title: "Your Page",
+            title: hiker.firstName + "'s Page",
             hiker : hiker.firstName,
             bio : hiker.bio
         })
