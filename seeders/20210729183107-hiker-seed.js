@@ -7,10 +7,12 @@ module.exports = {
         firstName: "Roger Rabbit",
         birthday: "1981-02-01",
         bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt ",
-        email: "mclovin@superbad.com",
+
+        email: "mckenna@onlydrinkscoldbrew.com",
         password: "$2b$10$G6qwrJnoln552PV.KAWoQ.FFZ1Y3K5YWREoi2U7bHSzMYfJ5VIpea"
 
         
+
 
       },
       {
@@ -73,9 +75,11 @@ module.exports = {
         firstName: "Myra Hindley",
         birthday: "1942-07-03",
         bio: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis tempora ipsam veritatis quae dicta architecto blanditiis. Fugit ipsam ducimus expedita voluptas necessitatibus adipisci molestiae id. Aliquam suscipit magnam deserunt ",
-        email: "reed@notamusician.com",
+
+        email: "reed@notadj.com",
         password: "$2b$10$G6qwrJnoln552PV.KAWoQ.FFZ1Y3K5YWREoi2U7bHSzMYfJ5VIpea"
         
+
       },
       {
         firstName: "Rosemary West",
