@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%-include('partials/head') %>
+<%-include('partials /head') %>
 
   <body class="body">
-    <%-include('partials/nav') %>
+    <%-include('partials /nav') %>
       <div class="row">
         <div class="col-12">
           <h1 class="title">
@@ -12,15 +12,15 @@
           </h1>
         </div>
       </div>
-<div class="row">
-      <% trails.forEach((trail)=> { %>
-        
-          <div class="col-sm-4 "style="margin-top: 1rem;">
+      <div class="row">
+        <% trails.forEach((trail)=> { %>
+
+          <div class="col-sm-4 " style="margin-top: 1rem;">
 
             <div class="cards justify-content-center" style="width: 18rem;">
 
 
-              <div class="card-body" >
+              <div class="card-body">
 
                 <h5 class="card-title">
                   <%=trail.trailName %>
@@ -30,12 +30,13 @@
                   <%=trail.description %>
                 </p>
                 <a href="#" class="cardLink">Card link</a>
-                
+
               </div>
-              
+
             </div>
-          </div><% })%>
-        </div>
+          </div>
+          <% })%>
+      </div>
 
 
 
