@@ -48,6 +48,12 @@ title {
   white-space: nowrap;
   color: #b56357;
 }
+.navLink:hover {
+  color: #466b41;
+}
+.navbarBrand:hover {
+  color: #466b41;
+}
 .cards {
   position: relative;
   display: flex;
