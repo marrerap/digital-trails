@@ -77,13 +77,15 @@
                 <div class="col">
                     <div class="jumbotron text-center mb-5" style="background-color: azure;">
                         <h3 class="display-4">Planned Hikes</h3>
-                        <p class="lead">
+                        <div class="lead">
                             <% if (plannedTrails.length === 0) { %>
-                                Nothing to see
+                                <p>Nothing to see</p>
                                 <% } else { %>
-                                    <%= plannedTrails %>
+                                  <% plannedTrails.forEach((eachTrail) => { %>
+                                    <h4> <%= eachTrail %> </h4>
+                                  <% }) %>
                               <%  }%>
-                        </p>
+                      </div>
 
                         <hr class="my-4"/>     
                         <a class="btn btn-primary mb-2" href="/trails" role="button">Add a Hike</a>            
