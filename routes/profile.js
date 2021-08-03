@@ -26,10 +26,7 @@ router.get('/', (req, res) => {
             const loopedTrails = function(arr) {
                 let listOfTrails = []
                 for (let index = 0; index < arr.length; index++) {
-                    listOfTrails.push( `
-                    <p>${arr[index].dataValues.Trail.trailName}</p>
-                    `)
-                    
+                    listOfTrails.push( arr[index].dataValues.Trail.trailName) 
                 }
                 return listOfTrails
             }
