@@ -62,7 +62,7 @@ router.post('/register', function(req, res, next) {
             if(success) {
               //login hiker
               req.session.hiker = hiker;
-              res.redirect('/hikers')
+              res.redirect('/profile')
             } else {
               //incorrect password
               res.status(401).json({error: 'incorrect password'})
