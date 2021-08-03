@@ -2,7 +2,8 @@
 const {
   Model
 } = require('sequelize');
-const hiker_trail = require('./hiker_trail');
+
+
 module.exports = (sequelize, DataTypes) => {
   class Hiker extends Model {
     /**
@@ -13,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Hiker.hasMany(models.Hiker_Trail)
+      Hiker.belongsToMany(models.Hiker, {as:"Friend", through: "Friends"})
     }
   };
   Hiker.init({
