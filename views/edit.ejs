@@ -5,10 +5,10 @@
     
       <body class="body">
         <%-include('partials/nav') %>
-        <form id="bioForm" method="patch" action="/edit">
+        <form id="bioForm" method="post" action="/edit?editBio=test">
             <label for="editBio">Edit About Me</label>
             <input type="text" name="editBio" id="editBio" required>
-            <button type="submit">Submit</button>
+            <button type="submit" class="update-button" data-id="<%=hiker.bio%>">Submit</button>
         </form>
-
+        <script src="/js/edit.js"></script>
       </body>
