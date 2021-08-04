@@ -81,10 +81,31 @@
                             <% if (plannedTrails.length === 0) { %>
                                 <p>Nothing to see</p>
                                 <% } else { %>
+                                  <div class="row">
                                   <% plannedTrails.forEach((eachTrail) => { %>
-                                    <h4> <%= eachTrail %> </h4>
-                                  <% }) %>
-                              <%  }%>
+
+             <div class="col-sm-4 " style="margin-top: 1rem;">
+   
+               <div class="cards justify-content-center" style="width: 18rem;">
+   
+   
+                 <div class="card-body">
+   
+                   <h5 class="card-title" style="text-align: center; font-size:x-large;">
+                     <%=eachTrail %>
+                   </h5>
+                   <form method="post" action="/profile?_method=PATCH">
+                     <button class="cardLink"><img src="https://img.icons8.com/color/50/000000/add-tag.png"/> Completed</button>
+                   </form>
+                   
+                 </div>
+   
+               </div>
+             </div>
+             
+             <% }) %>
+             <%  }%>
+            </div>                         
                       </div>
 
                         <hr class="my-4"/>     
