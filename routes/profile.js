@@ -25,7 +25,8 @@ router.get('/', (req, res) => {
                 .then((trail) => {
                     const completedTrails = hiker.Hiker_Trails.filter(trail => trail.completed)
                     const plannedTrails = hiker.Hiker_Trails.filter(trail => !trail.completed)
-                    console.log(completedTrails)
+                    const hikerFriends = hiker.Friend.filter(hiker => hiker.id)
+                    console.log(hikerFriends)
                     const loopedTrails = function (arr) {
                         let listOfTrails = []
                         for (let index = 0; index < arr.length; index++) {
@@ -37,7 +38,7 @@ router.get('/', (req, res) => {
                         title: "Your Profile",
                         hiker: hiker.firstName,
                         bio: hiker.bio,
-                        friends: hiker.Friend,
+                        friends: hikerFriends,
                         completedTrails: completedTrails,
                         plannedTrails: plannedTrails
                     })
