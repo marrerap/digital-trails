@@ -54,7 +54,7 @@ title {
   justify-content: center;
   font-size: 3.5rem ;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color:rgb(36, 189, 36);
+  color:rgb(255, 255, 255);
   }
 
 .title {
@@ -66,7 +66,7 @@ title {
 } */
 
 .navbar {
-  background-color: #8bc48b;
+  background-color: #013611;
   
 }
 .navLink {
@@ -97,15 +97,19 @@ title {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #b4dbc0;
+  background-color: #013611;
   background-clip: border-box;
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
-  color: #6b9764;
+  width: 286px;
+  height: 340px;
+  color: #eeecec;
 }
 .cardLink {
-  color: #466b41;
-  text-decoration: underline;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  background-color: #013611;
 }
 .cardLink:hover {
   color: #6e996a;
@@ -134,9 +138,12 @@ title {
 
 
 form {
-  background-color: #b4dbc0;
-  color: #466b41;
+  background-color: #013611;
+  color: #fcfcfc;
   
+}
+#addtrailform {
+  background-color: #fdfdfd00;
 }
 .logout {
   color: #b11c1cab;
