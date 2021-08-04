@@ -1,6 +1,41 @@
-body {
+.body {
   padding: 0px 5px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: auto;
+	/* max-height: 600px; */
+	width: 1000px;
+	background-color: hsla(200,40%,30%,.4);
+	background-image:		
+		url('https://78.media.tumblr.com/cae86e76225a25b17332dfc9cf8b1121/tumblr_p7n8kqHMuD1uy4lhuo1_540.png'), 
+		url('https://78.media.tumblr.com/66445d34fe560351d474af69ef3f2fb0/tumblr_p7n908E1Jb1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/8cd0a12b7d9d5ba2c7d26f42c25de99f/tumblr_p7n8kqHMuD1uy4lhuo2_1280.png'),
+		url('https://78.media.tumblr.com/5ecb41b654f4e8878f59445b948ede50/tumblr_p7n8on19cV1uy4lhuo1_1280.png'),
+		url('https://78.media.tumblr.com/28bd9a2522fbf8981d680317ccbf4282/tumblr_p7n8kqHMuD1uy4lhuo3_1280.png');
+	background-repeat: repeat-x;
+	background-position: 
+		0 20%,
+		0 60%, 
+		0 50%,
+		0 100%,
+		0 0;
+	background-size: 
+		2500px,
+		800px,
+		500px 200px,
+		1000px,
+		400px 260px;
+	animation: 50s para infinite linear;
+	}
+
+@keyframes para {
+	100% {
+		background-position: 
+			-5000px 20%,
+			-800px 95%,
+			500px 50%,
+			1000px 100%,
+			400px 0;
+		}
   
 }
 .titleDiv {
@@ -18,15 +53,17 @@ title {
   display: flex;
   justify-content: center;
   font-size: 3.5rem ;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(0, 255, 42);
   }
 
 .title {
   justify-content: center;
 }
-.body {
+/* .body {
   background-color: #b56357;
   color: #eae3ea;
-}
+} */
 
 .navbar {
   background-color: #eae3ea;
@@ -108,4 +145,8 @@ form {
 
 .logout:hover {
   color: #eae3ea;
+}
+
+.body-font {
+  font-family:cursive;
 }
