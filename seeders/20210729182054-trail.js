@@ -8,7 +8,7 @@ module.exports = {
         description: 'Lorem ipsum, dolor sit amet Andrew adipisicing elit. Molestiae natus, molestias deserunt Office John provident dolore Reed accusantium veritatis nulla! Mckenna amet cupiditate aspernatur Lachlan debitis magni earum Willie quis! Quis!'
       },
       {
-        trailName: 'Grandfather Mountain Trail',
+        trailName: 'Grandfather Trail',
         description: 'Lorem ipsum, dolor sit amet Andrew adipisicing elit. Molestiae natus, molestias deserunt Office John provident dolore Reed accusantium veritatis nulla! Mckenna amet cupiditate aspernatur Lachlan debitis magni earum Willie quis! Quis!'
       },
       {
