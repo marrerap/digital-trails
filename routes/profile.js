@@ -25,6 +25,7 @@ router.get('/', (req, res) => {
                 .then((trail) => {
                     const completedTrails = hiker.Hiker_Trails.filter(trail => trail.completed)
                     const plannedTrails = hiker.Hiker_Trails.filter(trail => !trail.completed)
+                    console.log(completedTrails)
                     const loopedTrails = function (arr) {
                         let listOfTrails = []
                         for (let index = 0; index < arr.length; index++) {
@@ -38,16 +39,17 @@ router.get('/', (req, res) => {
                         bio: hiker.bio,
                         friends: hiker.Friend,
                         completedTrails: completedTrails,
-                        plannedTrails: loopedTrails(plannedTrails)
+                        plannedTrails: plannedTrails
                     })
                 })
         })
 });
 
 
-router.patch("/", function (req, res, next) {
+router.patch("/:id", function (req, res, next) {
     db.Hiker_Trail.update(
-        { completed: true },
+        {completed: req.body.completed},
+        {where: {HikerId: req.session.hiker.id, TrailId: req.params.id}}
     )
         .then(function (rowsUpdated) {
             res.redirect('/profile')
