@@ -12,10 +12,10 @@ router.get('/', (req, res, next) => {
     })
 });
 
-router.post("/", function (req, res, next) {
+router.patch("/", function (req, res, next) {
     const input = document.getElementById('bioForm')
     db.Hiker.update(
-      {bio: input.value},
+      {bio: req.body.editBio},
     )
     .then(function(rowsUpdated) {
         console.log(input.value)
