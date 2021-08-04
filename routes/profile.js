@@ -11,47 +11,48 @@ router.get('/', (req, res) => {
         include: [{
             model: db.Hiker_Trail,
             include: [db.Trail]
-        }, 
-        // {
-        //     model: db.Friends
-        // }
-    ]
+        },
+        "Friend"
+        ]
     })
-      .then((hiker) => {
-        db.Hiker_Trail.findAll({
-            include: [db.Hiker, db.Trail], 
-            where: {
-                HikerId: req.session.hiker.id
-            }
-        })
-        // .then((friend) => {
-        //     db.Friend.findAll( {
-        //         include: [db.Hiker],
-        //         where: {
-        //             HikerId: req.session.hiker.id
-        //         }
-        //     })
-        //     console.log(friend, "friend")
-        .then((trail) => {
-            const completedTrails = hiker.Hiker_Trails.filter(trail => trail.completed)
-            const plannedTrails = hiker.Hiker_Trails.filter(trail => !trail.completed)
-            const loopedTrails = function(arr) {
-                let listOfTrails = []
-                for (let index = 0; index < arr.length; index++) {
-                    listOfTrails.push( arr[index].dataValues.Trail.trailName) 
+        .then((hiker) => {
+            db.Hiker_Trail.findAll({
+                include: [db.Hiker, db.Trail],
+                where: {
+                    HikerId: req.session.hiker.id
                 }
-                return listOfTrails
-            }
-            console.log(plannedTrails)
-            res.render('profile', {
-                title: "Your Profile",
-                hiker : hiker.firstName,
-                bio : hiker.bio,
-                completedTrails: completedTrails,
-                plannedTrails: loopedTrails(plannedTrails)
             })
+                .then((trail) => {
+                    const completedTrails = hiker.Hiker_Trails.filter(trail => trail.completed)
+                    const plannedTrails = hiker.Hiker_Trails.filter(trail => !trail.completed)
+                    const loopedTrails = function (arr) {
+                        let listOfTrails = []
+                        for (let index = 0; index < arr.length; index++) {
+                            listOfTrails.push(arr[index].dataValues.Trail.trailName)
+                        }
+                        return listOfTrails
+                    }
+                    res.render('profile', {
+                        title: "Your Profile",
+                        hiker: hiker.firstName,
+                        bio: hiker.bio,
+                        friends: hiker.Friend,
+                        completedTrails: completedTrails,
+                        plannedTrails: loopedTrails(plannedTrails)
+                    })
+                })
         })
-        })
-    });
+});
 
-  module.exports = router;
+
+router.patch("/", function (req, res, next) {
+    db.Hiker_Trail.update(
+        { completed: true },
+    )
+        .then(function (rowsUpdated) {
+            res.redirect('/profile')
+        })
+        .catch(next)
+})
+
+module.exports = router;

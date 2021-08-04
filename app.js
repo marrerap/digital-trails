@@ -4,6 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session');
 var homeRouter = require('./routes/home');
+var methodOverride = require('method-override')
 
 
 var hikersRouter = require('./routes/hikers');
@@ -21,6 +22,7 @@ app.set('views', 'views')
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(methodOverride('_method'))
 app.use(cookieParser());
 app.use(
     session({
