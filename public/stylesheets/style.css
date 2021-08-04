@@ -139,12 +139,12 @@ form {
   
 }
 .logout {
-  color: #ffffff;
+  color: #b11c1cab;
   text-decoration: none;
   }
 
 .logout:hover {
-  color: #aa0000c7;
+  color: #ff0000;
 }
 
 .body-font {
