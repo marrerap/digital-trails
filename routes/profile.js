@@ -9,8 +9,7 @@ const hiker_trail = require('../models/hiker_trail');
 router.get('/', (req, res) => {
     db.Hiker.findByPk(req.session.hiker.id, {
         include: [{
-            model:db.Hiker_Trail,
-            include: [db.Trail]
+            all: true
         }]
     })
       .then((hiker) => {
@@ -20,6 +19,16 @@ router.get('/', (req, res) => {
                 HikerId: req.session.hiker.id
             }
         })
+        .then((friends) => {
+            db.Friend.findAll({
+                include: [db.Hiker], 
+                where: {
+                    HikerId: req.session.hiker.id
+                }
+            })
+            .then((friend) => {
+                console.log(friend)
+            })
         .then((trail) => {
             const completedTrails = hiker.Hiker_Trails.filter(trail => trail.completed)
             const plannedTrails = hiker.Hiker_Trails.filter(trail => !trail.completed)
@@ -41,5 +50,5 @@ router.get('/', (req, res) => {
         })
     });
   })
-
+});
   module.exports = router;
