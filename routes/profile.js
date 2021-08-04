@@ -11,9 +11,11 @@ router.get('/', (req, res) => {
         include: [{
             model: db.Hiker_Trail,
             include: [db.Trail]
-        }, {
-            model: db.Friends
-        }]
+        }, 
+        // {
+        //     model: db.Friends
+        // }
+    ]
     })
       .then((hiker) => {
         db.Hiker_Trail.findAll({
@@ -22,15 +24,14 @@ router.get('/', (req, res) => {
                 HikerId: req.session.hiker.id
             }
         })
-        .then((friend) => {
-            db.Friend.findAll( {
-                include: [db.Hiker],
-                where: {
-                    HikerId: req.session.hiker.id
-                }
-            })
-            console.log(friend, "friend")
-        })
+        // .then((friend) => {
+        //     db.Friend.findAll( {
+        //         include: [db.Hiker],
+        //         where: {
+        //             HikerId: req.session.hiker.id
+        //         }
+        //     })
+        //     console.log(friend, "friend")
         .then((trail) => {
             const completedTrails = hiker.Hiker_Trails.filter(trail => trail.completed)
             const plannedTrails = hiker.Hiker_Trails.filter(trail => !trail.completed)
@@ -50,7 +51,7 @@ router.get('/', (req, res) => {
                 plannedTrails: loopedTrails(plannedTrails)
             })
         })
+        })
     });
-  })
 
   module.exports = router;
