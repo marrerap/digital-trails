@@ -1,37 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<%-include('partials/head') %>
-
-  <body>
-    <nav class="navbar navbar-expand-sm  ">
-      <div class="container-fluid">
-        <a class="navbarBrand" href="#">
-          <%= title %>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="navLink" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="navLink" href="/hikers">Hikers</a>
-            </li>
-            <li class="nav-item">
-              <a class="navLink" href="/trails">Trails</a>
-            </li>
-            <li class="nav-item">
-              <a class="navLink" href="/profile">My Page</a>
-            </li>
-          </ul>
-        </div>
-        <li class="nav-item d-flex align-items-center border  text-white">
-          <a class="navLink" style="background-color: eae3ea;" href="/edit">Edit Profile</a>
-        </li>
+    <html lang="en">
+    
+    <%-include('partials/head') %>
+    
+      <body style="background-color: rgba(172, 255, 47, 0.248);">
+        <nav class="navbar navbar-expand-sm  ">
+            <div class="container-fluid">
+              <a class="navbarBrand" href="#"><%= title %></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="navLink" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navLink" href="/hikers">Hikers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navLink" href="/trails">Trails</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="navLink" href="/profile">My Page</a>
+                  </li>
+                </ul>
+              </div>
+              <li class="nav-item d-flex align-items-center border  text-white">
+                <a class="navLink" style="background-color: eae3ea;" href="/edit">Edit Profile</a>
+              </li>
       </div>
     </nav>
 
@@ -51,6 +49,7 @@
           <div class="row mx-n1 d-flex justify-content-center mt-3 w-80">
             <div class="d-flex justify-content-center">
               <h3>Hiking Buddies</h3>
+
             </div>
             <% friends.forEach((eachFriend)=> { %>
               <div class="col-md-3 mb-3 px-1 d-flex flex-column align-items-center ">
