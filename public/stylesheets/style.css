@@ -54,7 +54,7 @@ title {
   justify-content: center;
   font-size: 3.5rem ;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(0, 255, 42);
+  color:rgb(36, 189, 36);
   }
 
 .title {
@@ -66,11 +66,11 @@ title {
 } */
 
 .navbar {
-  background-color: #eae3ea;
+  background-color: #8bc48b;
   
 }
 .navLink {
-  color: #b56357;
+  color: #fdfdfd;
   display: block;
     padding: .5rem 1rem;
     text-decoration: none;
@@ -83,13 +83,13 @@ title {
   font-size: 1.25rem;
   text-decoration: none;
   white-space: nowrap;
-  color: #b56357;
+  color: rgb(255, 255, 255);
 }
 .navLink:hover {
-  color: #466b41;
+  color: #1eff00;
 }
 .navbarBrand:hover {
-  color: #466b41;
+  color: #24ff07;
 }
 .cards {
   position: relative;
@@ -139,12 +139,12 @@ form {
   
 }
 .logout {
-  color: #eae3ea;
+  color: #ffffff;
   text-decoration: none;
   }
 
 .logout:hover {
-  color: #eae3ea;
+  color: #aa0000c7;
 }
 
 .body-font {
