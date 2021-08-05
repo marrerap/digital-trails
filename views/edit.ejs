@@ -7,8 +7,8 @@
         <%-include('partials/nav') %>
         <form id="bioForm" method="post" action="/edit?_method=PATCH">
             <label for="editBio">Edit About Me</label>
-            <input type="text" name="editBio" id="editBio" required>
-            <button type="submit" class="update-button" data-id="<%=hiker.bio%>">Submit</button>
+            <input type="text" name="editBio" id="editBio" value="test">
+            <button>Submit</button>
         </form>
         <script src="/js/edit.js"></script>
       </body>

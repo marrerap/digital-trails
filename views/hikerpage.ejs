@@ -20,29 +20,38 @@
                         <div class="d-flex justify-content-center">
                             <h3>Hiking Buddies</h3>
                         </div>
-                        <div class="col-md-3 mb-3 px-1 d-flex flex-column align-items-center ">
-                            <p>Friend</p>
-                            <a  href="not there yet">
-                                <img src="/image/golblum.png" width="90" height="80" class="rounded-circle border "/>
-                            </a>
-                        </div>
-                        <div class="col-md-3 mb-3 px-1 d-flex flex-column align-items-center">
-                            <p>Friend</p>
-                            <a  href="not there yet">
-                                <img src="/image/golblum.png" width="90" height="80" class="rounded-circle border "/>
-                            </a>
-                        </div>
-                        <div class="col-md-3 mb-3 px-1 d-flex flex-column align-items-center">
-                            <p>Friend</p>
-                            <a  href="not there yet">
-                                <img src="/image/golblum.png" width="90" height="80" class="rounded-circle border "/>
-                            </a>
-                        </div>
-                        <div class="col-md-3 mb-3 px-1 d-flex flex-column align-items-center">
-                            <p>Friend</p>
-                            <a  href="not there yet">
-                                <img src="/image/golblum.png" width="90" height="80" class="rounded-circle border "/>
-                            </a>
+                        <div class="lead">
+                            <% if (plannedTrails.length===0) { %>
+                              <p>Nothing to see</p>
+                              <% } else { %>
+                                <div class="row">
+                                  <% plannedTrails.forEach((eachTrail)=> { %>
+              
+                                    <div class="col" style="margin-top: 1rem;">
+              
+                                      <div class="cards justify-content-center" style="width: 18rem;">
+              
+              
+                                        <div class="card-body ">
+              
+                                          <h5 class="card-title" style="text-align: center; font-size:x-large;">
+                                            <%=eachTrail.Trail.trailName %>
+                                          </h5>
+                                          <form method="post" action="/profile/<%=eachTrail.Trail.id%>?_method=PATCH">
+                                            <input type="hidden" name="completed" value="true" />
+                                            <button class="cardLink"><img src="https://img.icons8.com/color/50/000000/add-tag.png" width="25" height="25"/>
+                                              Completed</button>
+                                          </form>
+              
+                                        </div>
+              
+                                      </div>
+                                    </div>
+              
+                                    <% }) %>
+                                      <% }%>
+                                </div>
+                          </div>
                         </div>
 
                     </div>
@@ -56,7 +65,33 @@
                     </div>
                     <div class="jumbotron text-center mb-5" style="background-color: azure;">
                         <h3 class="display-4">Completed Hikes</h3>
-                        <p class="lead">Nothing to see here</p>
+                        <div class="lead">
+                            <% if (completedTrails.length===0) { %>
+                              <p>Nothing to see</p>
+                              <% } else { %>
+                                <div class="row">
+                                  <% completedTrails.forEach((eachTrail)=> { %>
+              
+                                    <div class="col " style="margin-top: 1rem;">
+              
+                                      <div class="cards justify-content-center" style="width: 18rem;">
+              
+              
+                                        <div class="card-body">
+              
+                                          <h5 class="card-title" style="text-align: center; font-size:x-large;">
+                                            <%=eachTrail.Trail.trailName %>
+                                          </h5>
+                                        </div>
+              
+                                      </div>
+                                    </div>
+              
+                                    <% }) %>
+                                      <% }%>
+                                </div>
+              
+                          </div>
                     </div>
             </div>
             </div>

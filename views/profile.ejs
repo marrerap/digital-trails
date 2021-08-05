@@ -27,9 +27,14 @@
                   </li>
                 </ul>
               </div>
-              <li class="nav-item d-flex align-items-center border  text-white">
-                <a class="navLink" style="background-color: eae3ea;" href="/edit">Edit Profile</a>
-              </li>
+              <div class="d-flex justify-content-space-between">
+                <li class="nav-item  d-flex align-items-center border  text-white">
+                  <a class="navLink" style="background-color: eae3ea;" href="/edit">Edit Profile</a>
+                </li>
+                <li class="nav-item d-flex align-items-center border  text-white">
+                  <a class="navLink" style="background-color: eae3ea;" href="/">LogOut</a>
+                </li>
+              </div>
       </div>
     </nav>
 
@@ -61,25 +66,6 @@
                 </a>
               </div>
               <% }) %>
-                <!-- <div class="col-md-3 mb-3 px-1 d-flex flex-column align-items-center">
-                            <p>Friend</p>
-                            <a  href="not there yet">
-                                <img src="/image/golblum.png" width="90" height="80" class="rounded-circle border "/>
-                            </a>
-                        </div>
-                        <div class="col-md-3 mb-3 px-1 d-flex flex-column align-items-center">
-                            <p>Friend</p>
-                            <a  href="not there yet">
-                                <img src="/image/golblum.png" width="90" height="80" class="rounded-circle border "/>
-                            </a>
-                        </div>
-                        <div class="col-md-3 mb-3 px-1 d-flex flex-column align-items-center">
-                            <p>Friend</p>
-                            <a  href="not there yet">
-                                <img src="/image/golblum.png" width="90" height="80" class="rounded-circle border "/>
-                            </a>
-                        </div> -->
-
           </div>
         </div>
         <div class="col">
@@ -104,7 +90,7 @@
                             </h5>
                             <form method="post" action="/profile/<%=eachTrail.Trail.id%>?_method=PATCH">
                               <input type="hidden" name="completed" value="true" />
-                              <button class="cardLink"><img src="https://img.icons8.com/color/50/000000/add-tag.png" />
+                              <button class="cardLink"><img src="https://img.icons8.com/color/50/000000/add-tag.png" width="25" height="25"/>
                                 Completed</button>
                             </form>
 
@@ -139,12 +125,6 @@
                             <h5 class="card-title" style="text-align: center; font-size:x-large;">
                               <%=eachTrail.Trail.trailName %>
                             </h5>
-                            <form method="post" action="/profile/<%=eachTrail.Trail.id%>?_method=PATCH">
-                              <input type="hidden" name="completed" value="true" />
-                              <button class="cardLink"><img src="https://img.icons8.com/color/50/000000/add-tag.png" />
-                                Completed</button>
-                            </form>
-
                           </div>
 
                         </div>

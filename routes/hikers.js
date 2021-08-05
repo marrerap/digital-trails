@@ -2,10 +2,6 @@ var express = require('express');
 var router = express.Router();
 const db = require('../models');
 
-
-
-
-
 router.get('/', (req, res, next) => {
   db.Hiker.findAll()
     .then((hikers) => {
@@ -37,17 +33,39 @@ router.post('/', (req, res) => {
     })
 })
 
-router.get('/:id', (req, res, next) => {
-  db.Hiker.findOne({ where: { id: req.params.id } })
-    .then((hiker) => {
-      res.render('hikerpage', {
-        title: hiker.firstName + "'s Page",
-        hiker: hiker.firstName,
-        bio: hiker.bio
+router.get('/:id', (req, res) => {
+  db.Hiker.findByPk(req.params.id, {
+      include: [{
+          model: db.Hiker_Trail,
+          include: [db.Trail]
+      },
+      "Friend"
+      ]
+  })
+      .then((hiker) => {
+          db.Hiker_Trail.findAll({
+              include: [db.Hiker, db.Trail],
+              where: {
+                  HikerId: req.session.hiker.id
+              }
+          })
+              .then((trail) => {
+                  const completedTrails = hiker.Hiker_Trails.filter(trail => trail.completed)
+                  const plannedTrails = hiker.Hiker_Trails.filter(trail => !trail.completed)
+                  const hikerFriends = hiker.Friend.filter(hiker => hiker.id)
+                  console.log(hikerFriends)
+                  res.render('profile', {
+                      title: hiker.firstName +"'s Profile",
+                      hiker: hiker.firstName,
+                      bio: hiker.bio,
+                      friends: hikerFriends,
+                      completedTrails: completedTrails,
+                      plannedTrails: plannedTrails
+                  })
+              })
       })
+});
 
-    });
-})
 router.post('/:id', async function (req, res, next) {
   const hiker = await db.Hiker.findByPk(req.session.hiker.id)
   const friend = await db.Hiker.findByPk(req.params.id)

@@ -26,7 +26,6 @@ router.get('/', (req, res) => {
                     const completedTrails = hiker.Hiker_Trails.filter(trail => trail.completed)
                     const plannedTrails = hiker.Hiker_Trails.filter(trail => !trail.completed)
                     const hikerFriends = hiker.Friend.filter(hiker => hiker.id)
-                    console.log(hikerFriends)
                     res.render('profile', {
                         title: "Your Profile",
                         hiker: hiker.firstName,
