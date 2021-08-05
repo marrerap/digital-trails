@@ -13,16 +13,16 @@ router.get('/', (req, res, next) => {
 });
 
 router.patch("/", function (req, res, next) {
-    const input = document.getElementById('bioForm')
-    db.Hiker.update(
-      {bio: req.body.editBio},
-    )
-    .then(function(rowsUpdated) {
-        console.log(input.value)
-      res.redirect('/profile')
-    })
-    .catch(next)
-   })
+  db.Hiker.update(
+      {bio: req.body.bio},
+      {where: {id: req.session.hiker.id}}
+      )
+  .then(function (rowsUpdated) {
+          res.redirect('/profile')
+          console.log(bio)
+      })
+      .catch(next)
+})
 
 
 module.exports = router;

@@ -4,20 +4,11 @@
 <%-include('partials/head') %>
 
   <body style="background-color: rgba(242, 245, 236, 0.87);">
-    <div class="row justify-content-end" style="margin-bottom: 10px;">
-        <div class="col-1 " style="padding: 0px;">
-
-          <a class="logout"  href="/logout">Logout</a>
-      
-        </div>
-      </div>
     <%-include('partials/nav') %>
-      
-      
-      <div class="row">
+      <div class="row d-flex justify-content-center">
         <% trails.forEach((trail)=> { %>
 
-          <div class="col-sm-4 " style="margin-top: 1rem;">
+          <div class="col-sm-4 d-flex justify-content-center" style="margin-top: 1rem;">
 
             <div class="cards justify-content-center" style="width: 18rem;">
 
@@ -31,16 +22,19 @@
                 <p class="card-text">
                   <%=trail.description %>
                 </p>
+              </div>
+              <hr>
+              <div class="mb-2 d-flex justify-content-center">
                 <form id="addtrailform" method="post" action="/trails/<%=trail.id%>">
                   <button class="cardLink"><img src="https://img.icons8.com/color/50/000000/add-tag.png" width="25px" height="25px"/> Add to Planned Hikes</button>
                 </form>
-                
               </div>
 
             </div>
           </div>
           <% })%>
       </div>
+
 
 
 
